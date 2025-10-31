@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import { Roboto, Roboto_Mono } from "next/font/google";
 
-const geistSans = localFont({
-  src: "/fonts/Geist.woff2",
+const geistSans = Roboto({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
-const geistMono = localFont({
-  src: "/fonts/GeistMono.woff2",
+const geistMono = Roboto_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
