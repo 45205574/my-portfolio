@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Roboto, Roboto_Mono } from "next/font/google";
 
-const geistSans = Geist({
+const geistSans = Roboto({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["400", "700"], // specify the weights you need
 });
 
-const geistMono = Geist_Mono({
+const geistMono = Roboto_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ["400"], // mono usually just one weight
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
