@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Roboto, Roboto_Mono } from "next/font/google";
+import { Inter, Fira_Mono } from "next/font/google";
+import "./globals.css";
 
-const geistSans = Roboto({
-  variable: "--font-geist-sans",
+// Fancy-ish sans and monospace fonts
+const sans = Inter({
+  variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "700"], // specify the weights you need
+  weight: ["400", "700"],
 });
 
-const geistMono = Roboto_Mono({
-  variable: "--font-geist-mono",
+const mono = Fira_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400"], // mono usually just one weight
+  weight: ["400"],
 });
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${sans.variable} ${mono.variable} antialiased`}>
         {children}
       </body>
     </html>
